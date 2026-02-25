@@ -242,8 +242,9 @@ span {
 }
 
 .about-content p {
-    font-size: 1.5rem;
-    margin: 2rem 0 2rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin: 3rem 0 3rem;
 }
 
 .skills {
