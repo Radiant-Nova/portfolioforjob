@@ -97,7 +97,7 @@ section {
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
+    cursor: default;
     position: relative;
     animation: floatImage 4s ease-in-out infinite;
     transition: 0.4s ease;
@@ -211,10 +211,10 @@ span {
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
+    cursor: default;
     animation: floatImage 4s ease-in-out infinite;
     transition: 0.4s ease;
-    margin-right: 3rem;
+    margin-right: 4rem;
 }
 
 .about-img img:hover {
@@ -244,16 +244,18 @@ span {
 .about-content p {
     font-size: 1.8rem;
     line-height: 1.5;
-    margin: 3rem 0 3rem;
+    margin: 2rem 0 1.5rem;
 }
 
 .skills {
     text-align: center;
     width: 25%;
+    cursor: default;
 }
 
 .skill-tag {
     display: inline-block;
+    line-height: 1.2;
     padding: 8px 16px;
     background: var(--main-color);
     border-radius: 20px;
@@ -261,4 +263,87 @@ span {
     font-size: 14px;
     font-weight: 500;
     color: var(--bg-color);
+    transition: 0.3s ease;
+}
+
+.skills :hover {
+    transform: scale(1.2) translateY(-5px);
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.education {
+    display: flex;
+    flex-direction: row;
+    background: var(--snd-bg-color);
+    margin-top: 2rem;
+}
+
+.edu-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.edu-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-left: 3rem;
+}
+
+.img-ipb img {
+    width: 7vh;
+    height: 7vh;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--main-color);
+    cursor: pointer;
+    position: relative;
+}
+
+.img-ipb img:hover {
+    transform: scale(1) translateY(-5px);
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.img-ulm img {
+    width: 7vh;
+    height: 7vh;
+    cursor: pointer;
+    position: relative;
+    filter: drop-shadow(0 0 8px var(--main-color));
+}
+
+.img-ulm img:hover {
+    transform: scale(1) translateY(-5px);
+    color: var(--main-color);
+    filter: drop-shadow(0 0 10px var(--main-color));
+}
+
+.edu-text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    line-height: 1.5;
+    margin-left: 0.7rem;
+}
+
+.edu-text h1 {
+    font-size: 1.4rem;
+}
+
+.edu-text h2 {
+    font-size: 1.3rem;
+}
+
+.edu-text h3 {
+    font-size: 1.2rem;
 }
