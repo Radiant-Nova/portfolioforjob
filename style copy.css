@@ -32,6 +32,22 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+.sharktip {
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;
+    width: 10%;
+    height: 10%;
+    object-fit: contain;
+    top: 90%;
+}
+
+.ocean {
+    position: fixed;
+    z-index: -1;
+    top: 40%;
+}
+
 /* header section code */
 
 .header {
@@ -610,6 +626,7 @@ span {
         display: block;
         padding: 17px;
         font-size: 20px;
+        color: var(--text-color);
     }
 
     .navbar.active {
