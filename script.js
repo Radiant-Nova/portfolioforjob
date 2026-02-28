@@ -1,5 +1,6 @@
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
+let iconTop = document.querySelector('.footer-iconTop a');
 
 menu.onclick = () => {
     menu.classList.toggle('fa-bars');
@@ -7,10 +8,23 @@ menu.onclick = () => {
     navbar.classList.toggle('active');
 }
 
+let lastScrollY = window.scrollY;
+
 window.onscroll = () => {
     menu.classList.remove('fa-bars-staggered');
     menu.classList.add('fa-bars');
     navbar.classList.remove('active');
+
+    // Hide if scrolling UP or near the top
+    if (window.scrollY < lastScrollY || window.scrollY <= 150) {
+        iconTop.classList.remove('show');
+    } else {
+        // Show if scrolling DOWN and past the top section
+        iconTop.classList.add('show');
+    }
+
+    // Update last scroll position
+    lastScrollY = window.scrollY;
 }
 
 var typed = new Typed('.multiple-text', {

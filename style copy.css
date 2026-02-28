@@ -25,6 +25,8 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 section {
@@ -381,7 +383,7 @@ span {
 }
 
 .projects-container .projects-box {
-    flex: 0 0 50rem;
+    flex: 0 0 30rem;
     height: 35rem;
     background: var(--snd-bg-color);
     padding: 3rem 2rem 3rem;
@@ -536,16 +538,30 @@ span {
 }
 
 .footer-iconTop a {
+    position: fixed;
+    bottom: 2rem;
+    right: 2.1rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 0.9rem;
     background: var(--main-color);
     border-radius: 0.8rem;
-    transition: 0.3s ease;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    z-index: 1000;
+}
+
+.footer-iconTop a.show {
+    opacity: 0.7;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .footer-iconTop a:hover {
+    opacity: 1;
     transform: scale(1.2) translateY(-5px);
     background-color: var(--main-color);
     color: var(--bg-color);
@@ -583,8 +599,40 @@ span {
         padding: 10rem 3%;
     }
 
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content {
+        order: 2;
+        margin-left: 1rem;
+        margin-top: 3rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+        height: 60vw;
+        max-width: 450px;
+        max-height: 450px;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
     .about {
         flex-direction: column-reverse;
+    }
+
+    .about-img img {
+        width: 60vw;
+        height: 60vw;
+        max-width: 450px;
+        max-height: 450px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-content {
+        margin-left: 1rem;
     }
 
     .skills {
@@ -612,7 +660,7 @@ span {
     .navbar {
         position: absolute;
         top: 100%;
-        right: -100%;
+        right: -255px;
         width: 255px;
         min-height: 100vh;
         display: flex;
@@ -652,7 +700,9 @@ span {
 
     .home-img img {
         width: 70vw;
-        margin-top: 4rem;
+        height: 70vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
     }
 
     .about {
@@ -661,7 +711,9 @@ span {
 
     .about-img img {
         width: 70vw;
-        margin-top: 4rem;
+        height: 70vw;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     .about-content {
@@ -702,12 +754,15 @@ span {
 @media (max-width: 617px) {
     .home-img img {
         width: 70vw;
-        margin-top: 8rem;
+        height: 70vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
     }
 
     .about-img img {
         width: 70vw;
-        margin-top: 4rem;
+        height: 70vw;
+        margin-top: 2rem;
     }
 
     .skills {
